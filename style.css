@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(238, 240, 241);
+}
+
+header {
+  margin: 0;
+  background-color: rgb(1, 1, 20);
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0;
+  color: #fff;
+}
+
+header p {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #fff;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  background-color: rgb(2, 2, 77);
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  margin: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid gray;
+  flex: 2;
+  background-color: #fff;
+}
+
+section h3,
+p,
+li {
+  color: rgb(2, 2, 77);
+  list-style-type: square;
+  padding: 5px;
+}
+
+section h3 {
+  font-size: 25px;
+}
+
+section p {
+  font-size: 20px;
+}
+
+section li {
+  padding: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+aside {
+  margin: 20px;
+  margin-left: 0;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid gray;
+  flex: 1;
+  background-color: #ddf4fe;
+}
+
+.orange {
+  color: rgb(135, 95, 1);
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(1, 1, 20);
+}
+footer h5 {
+  margin: 0;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+  color: #d6edf7;
+}
+
+.kotak {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Daftar Kedai Kopi Senja</h1>
+      <p>Tempat singgah, cerita, dan secangkir kopi</p>
+    </header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="menu.html">Menu</a>
+      <a href="#">Kontak</a>
+    </nav>
+    <main>
+      <section>
+        <div class="kotak">
+          <div style="text-align: center">
+            <img src="kopi1.webp" width="300" alt="" />
+            <br />
+            <button onclick="pilihKopi(20000)">Buy</button>
+          </div>
+          <div style="text-align: center">
+            <img src="kopi2.webp" width="300" alt="" />
+            <br />
+            <button onclick="pilihKopi(25000)">Buy</button>
+          </div>
+          <div style="text-align: center">
+            <img src="kopi3.webp" width="300" alt="" />
+            <br />
+            <button onclick="pilihKopi(30000)">Buy</button>
+          </div>
+        </div>
+
+        <div style="padding-top: 25px">
+          <h2>Hitung Total Bayar: <span id="bayar"></span></h2>
+          <label for="">Harga Kopi</label>
+          <input id="harga" type="text" />
+          <label for="">Jumlah</label>
+          <input id="jumlah" type="number" />
+          <label for="">Diskon (%)</label>
+          <input id="diskon" max="100" min="0" type="number" />
+          <button onclick="hitungTotal()">Hitung</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h4>Kedai Kopi Senja</h4>
+      <p>Kontak: kedaisenja@example.com</p>
+    </footer>
+
+    <script>
+      function pilihKopi(harga) {
+        document.getElementById("harga").value = harga;
+      }
+
+      function hitungTotal() {
+        let harga = Number(document.getElementById("harga").value);
+        let jumlah = Number(document.getElementById("jumlah").value);
+        let diskon = Number(document.getElementById("diskon").value);
+
+        if (harga <= 0 || jumlah <= 0) {
+          alert("Pilih kopi dan masukkan jumlah terlebih dahulu!");
+          return;
+        }
+
+        let subtotal = harga * jumlah;
+        let potongan = (subtotal * diskon) / 100;
+        let total = subtotal - potongan;
+
+        document.getElementById("bayar").innerHTML = "Rp " + total;
+      }
+    </script>
+  </body>
+</html>
